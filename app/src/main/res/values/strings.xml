@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">Ma_super_appli_scolaire</string>
+    <string name="app_name">Ecole des Loustics</string>
 
+    <!--- Page d'accueil -->
+    <string name="a_bienvenue">Bienvenue dans l'application de l'Ecole des Loustics !</string>
+    <string name="a_choix_compte">Sélectionne ton compte</string>
+    <string name="a_creer_compte">Crée un nouveau compte</string>
+    <string name="a_anonyme">Joue en mode anonyme</string>
+
+    <!---  -->
 </resources>

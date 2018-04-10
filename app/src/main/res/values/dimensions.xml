@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensions -->
+
+    <!-- Boutons -->
+    <dimen name="b_largeur">250dp</dimen>
+
+    <!-- Marges -->
+    <dimen name="interieur">5px</dimen>
+    <dimen name="exterieur">20px</dimen>
+</resources>
