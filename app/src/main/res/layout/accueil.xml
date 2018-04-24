@@ -45,15 +45,6 @@
             android:layout_margin="@dimen/exterieur"
             />
 
-        <Button
-            android:id="@+id/a_bouton_anonyme"
-            android:layout_width="@dimen/b_largeur"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/a_anonyme"
-            android:padding="@dimen/interieur"
-            android:layout_margin="@dimen/exterieur"
-            />
 
     </LinearLayout>
 

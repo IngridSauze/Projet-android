@@ -8,4 +8,9 @@
     <!-- Marges -->
     <dimen name="interieur">5px</dimen>
     <dimen name="exterieur">20px</dimen>
+
+    <!-- Avatars -->
+    <dimen name="dimension_avatar">50dp</dimen>
+
+    <!-- -->
 </resources>

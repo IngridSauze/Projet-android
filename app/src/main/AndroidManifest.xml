@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".creer_compte" />
-        <activity android:name=".avatar" />
         <activity android:name=".validation_compte" />
         <activity android:name=".liste_exercices"></activity>
     </application>

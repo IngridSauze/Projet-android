@@ -35,22 +35,60 @@
             android:layout_margin="@dimen/exterieur"
             />
 
-        <!-- Le texte change quand l'avatar a été choisi : choisir un autre avatar -->
-        <Button
-            android:id="@+id/c_bouton_avatar"
-            android:layout_width="@dimen/b_largeur"
+
+        <TextView
+            android:id="@+id/c_avatar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/c_avatar"
+            android:textAlignment="center"
+            android:text="@string/c_avatar_choix"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />
 
-        <!-- L'image devient visible quand l'avatar a été sélectionné -->
-        <ImageView
-            android:id="@+id/c_image_avatar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!-- Liste des images des avatars -->
+
+        <LinearLayout
+            android:id="@+id/c_liste_avatars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/c_bebe_gnou"
+                android:layout_width="@dimen/dimension_avatar"
+                android:layout_height="@dimen/dimension_avatar"
+                android:layout_gravity="center"
+                android:padding="@dimen/interieur"
+                android:layout_margin="@dimen/exterieur"
+                android:src="@drawable/bebe_gnou"
+                />
+
+            <ImageView
+                android:id="@+id/c_gnou_duo"
+                android:layout_width="@dimen/dimension_avatar"
+                android:layout_height="@dimen/dimension_avatar"
+                android:layout_gravity="center"
+                android:padding="@dimen/interieur"
+                android:layout_margin="@dimen/exterieur"
+                android:src="@drawable/gnou_duo"
+                />
+
+            <ImageView
+                android:id="@+id/c_gnou_meditant"
+                android:layout_width="@dimen/dimension_avatar"
+                android:layout_height="@dimen/dimension_avatar"
+                android:layout_gravity="center"
+                android:padding="@dimen/interieur"
+                android:layout_margin="@dimen/exterieur"
+                android:src="@drawable/gnou_meditant"
+                />
+
+        </LinearLayout>
+
 
         <Button
             android:id="@+id/c_bouton_valider"

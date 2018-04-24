@@ -5,12 +5,11 @@
     <string name="a_bienvenue">Bienvenue dans l\'application de l\'Ecole des Loustics !</string>
     <string name="a_choix_compte">Sélectionne ton compte</string>
     <string name="a_creer_compte">Crée un nouveau compte</string>
-    <string name="a_anonyme">Joue en mode anonyme</string>
 
     <!--- Créer un compte -->
     <string name="c_prenom">Prénom</string>
     <string name="c_nom">Nom de famille</string>
-    <string name="c_avatar">Choisis ton avatar</string>
+    <string name="c_avatar_choix">Choisis ton avatar</string>
     <string name="c_avatar_changement">Changer d\'avatar</string>
 
     <!--- Page de choix de l'avatar -->
