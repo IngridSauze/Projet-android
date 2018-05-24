@@ -12,9 +12,4 @@ public class CompteDAO {
     public static List<Compte> selectTous() {
         return Compte.listAll(Compte.class, "prenom") ;
     }
-
-    // Sélectionner un compte à partir du prénom
-    public static Compte selectParPrenom(String prenom) {
-
-    }
 }

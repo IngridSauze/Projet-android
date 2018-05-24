@@ -14,7 +14,7 @@ public class Compte extends SugarRecord {
     public Compte() {
     }
 
-    Compte(String nom, String prenom) {
+   public Compte(String nom, String prenom) {
         setNom(nom) ;
         setPrenom(prenom) ;
     }

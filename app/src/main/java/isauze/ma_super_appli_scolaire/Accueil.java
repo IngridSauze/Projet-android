@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.orm.SchemaGenerator;
+import com.orm.SugarContext;
+import com.orm.SugarDb;
+import com.orm.SugarRecord;
+
 public class Accueil extends AppCompatActivity {
 
     @Override
@@ -14,6 +19,12 @@ public class Accueil extends AppCompatActivity {
 
         // Surcharge du XML pour créer la hiérarchie des composants graphiques
         setContentView(R.layout.accueil);
+
+        SugarContext.terminate();
+        SchemaGenerator schemaGenerator = new SchemaGenerator(getApplicationContext());
+        schemaGenerator.deleteTables(new SugarDb(getApplicationContext()).getDB());
+        SugarContext.init(getApplicationContext());
+        schemaGenerator.createDatabase(new SugarDb(getApplicationContext()).getDB());
 
         // Récupérer les objets de l'arbre graphique avec leur id
         Button creer = (Button) findViewById(R.id.a_bouton_nouv_compte) ;

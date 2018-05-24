@@ -25,11 +25,11 @@
     <!-- SugarORM -->
     <metadata
         android:name="DATABASE"
-        android:value="ma_base.db"
+        android:value="la_base.db"
         />
     <metadata
         android:name="VERSION"
-        android:value="1"
+        android:value="0"
         />
     <metadata
         android:name="QUERY_LOG"
@@ -37,7 +37,7 @@
         />
     <metadata
         android:name="DOMAIN_PACKAGE_NAME"
-        android:value="mi1.ma_base.data"
+        android:value="app/java/classes"
         />
     </application>
 
