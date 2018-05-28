@@ -23,22 +23,6 @@
         <activity android:name=".liste_exercices"></activity>
 
     <!-- SugarORM -->
-    <metadata
-        android:name="DATABASE"
-        android:value="la_base.db"
-        />
-    <metadata
-        android:name="VERSION"
-        android:value="0"
-        />
-    <metadata
-        android:name="QUERY_LOG"
-        android:value="true"
-        />
-    <metadata
-        android:name="DOMAIN_PACKAGE_NAME"
-        android:value="app/java/classes"
-        />
     </application>
 
 </manifest>
