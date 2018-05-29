@@ -12,11 +12,24 @@
     <string name="c_avatar_choix">Choisis ton avatar</string>
     <string name="c_avatar_changement">Changer d\'avatar</string>
 
+    <!--- Validation d'un compte -->
+    <string name="v_erreur">Erreur ! le compte n\'a pas été créé !</string>
+    <string name="v_bienvenue">Bienvenue</string>
+
     <!--- Page de choix de l'avatar -->
     <string name="av_choix">Choisis une image puis appuie sur \"valider\".</string>
 
     <!--- Liste des exercices par matières -->
+    <string name="l_texte">Liste des matières disponibles</string>
     <string name="l_mathematiques">Mathématiques</string>
+    <string name="l_culture">Culture générale</string>
+
+    <!--- Page d'accueil des mathématiques -->
+    <string name="am_addition">Addition</string>
+    <string name="am_soustraction">Soustraction</string>
+    <string name="am_multiplication">Multiplication</string>
+    <string name="am_division">Division</string>
+
 
     <!---  -->
     <!--- Boutons généraux -->
@@ -24,7 +37,9 @@
     <string name="b_accueil">Retour à la page d\'accueil</string>
     <string name="b_exercices">Choisir un exercice</string>
     <string name="b_annuler">Annuler</string>
-    <!---  -->
+
+    <!--- Textes généraux -->
+    <string name="t_exos">Choisis un exercice</string>
 
     <!---  -->
 </resources>

@@ -14,12 +14,33 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp">
 
+        <TextView
+            android:id="@+id/l_texte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="@string/l_texte"
+            android:padding="@dimen/interieur"
+            android:layout_margin="@dimen/exterieur"
+            />
+
         <Button
             android:id="@+id/l_maths"
             android:layout_width="@dimen/b_largeur"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/l_mathematiques"
+            android:padding="@dimen/interieur"
+            android:layout_margin="@dimen/exterieur"
+            />
+
+        <Button
+            android:id="@+id/l_culture_g"
+            android:layout_width="@dimen/b_largeur"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/l_culture"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />

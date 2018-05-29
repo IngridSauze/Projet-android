@@ -1,4 +1,4 @@
-package classes;
+package classes_base;
 
 import com.orm.SugarRecord;
 

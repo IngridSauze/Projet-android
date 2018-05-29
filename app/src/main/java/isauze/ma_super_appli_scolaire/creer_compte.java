@@ -5,11 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import classes.Compte;
+import classes_base.Compte;
 
 public class creer_compte extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,9 +29,11 @@ public class creer_compte extends AppCompatActivity implements View.OnClickListe
         // Récupérer les objets de l'arbre graphique avec leur id
         final TextView prenom = (TextView) findViewById(R.id.c_champ_prenom) ;
         final TextView nom = (TextView) findViewById(R.id.c_champ_nom) ;
+
         // Créer et sauvegarder le compte
-        Compte compte = new Compte("nom", "nom") ;
+        Compte compte = new Compte(nom.toString(), prenom.toString()) ;
         compte.save() ;
+
         // Basculer sur l'activité validation compte
         Intent intent = new Intent(this, validation_compte.class) ;
         intent.putExtra("PRENOM_C", prenom.toString()) ; // Ajout du prénom à l'intention
