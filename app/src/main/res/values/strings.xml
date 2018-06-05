@@ -30,8 +30,9 @@
     <string name="am_multiplication">Multiplication</string>
     <string name="am_division">Division</string>
 
+    <!--- Additions -->
+    <string name="ad_consigne">Choisis la table d\'addition que tu veux réviser.</string>
 
-    <!---  -->
     <!--- Boutons généraux -->
     <string name="b_valider">Valider</string>
     <string name="b_accueil">Retour à la page d\'accueil</string>

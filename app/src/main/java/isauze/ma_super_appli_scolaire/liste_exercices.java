@@ -26,7 +26,7 @@ public class liste_exercices extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) { // récupération de l'id du bouton qui a été cliqué
             case R.id.l_maths :
-                Intent intent = new Intent(this, Maths_accueil.class) ;
+                Intent intent = new Intent(this, maths_accueil.class) ;
                 startActivity(intent);
                 break;
 

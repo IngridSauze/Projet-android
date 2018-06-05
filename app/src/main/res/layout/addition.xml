@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="isauze.ma_super_appli_scolaire.maths_accueil">
-
+    tools:context="isauze.ma_super_appli_scolaire.addition">
     <LinearLayout
-        android:id="@+id/l_accueil_maths"
+        android:id="@+id/ad_addition"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -15,52 +14,32 @@
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/am_texte_accueil"
+            android:id="@+id/ad_texte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:text="@string/t_exos"
+            android:text="@string/ad_consigne"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />
 
-        <Button
-            android:id="@+id/am_b_addition"
-            android:layout_width="@dimen/b_largeur"
+        <NumberPicker
+            android:id="@+id/ad_num"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/am_addition"
+            android:textAlignment="center"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
-            />
+        />
 
         <Button
-            android:id="@+id/am_b_soustraction"
+            android:id="@+id/ad_valider"
             android:layout_width="@dimen/b_largeur"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/am_soustraction"
-            android:padding="@dimen/interieur"
-            android:layout_margin="@dimen/exterieur"
-            />
-
-        <Button
-            android:id="@+id/am_b_multiplication"
-            android:layout_width="@dimen/b_largeur"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/am_multiplication"
-            android:padding="@dimen/interieur"
-            android:layout_margin="@dimen/exterieur"
-            />
-
-        <Button
-            android:id="@+id/am_b_division"
-            android:layout_width="@dimen/b_largeur"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/am_division"
+            android:text="@string/b_valider"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />

@@ -22,7 +22,9 @@
         <activity android:name=".liste_exercices" />
 
         <!-- SugarORM -->
-        <activity android:name=".Maths_accueil"></activity>
+        <activity android:name=".maths_accueil" />
+        <activity android:name=".addition" />
+        <activity android:name=".addition_1"></activity>
     </application>
 
 </manifest>

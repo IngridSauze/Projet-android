@@ -12,5 +12,9 @@
     <!-- Avatars -->
     <dimen name="dimension_avatar">50dp</dimen>
 
+    <!-- Dimension des Textview pour les tables mathématiques -->
+    <dimen name="dimension_maths">150dp</dimen>
+    <dimen name="dimension_maths2">80dp</dimen>
+
     <!-- -->
 </resources>
