@@ -1,5 +1,6 @@
 package classes_base;
 
+import com.orm.SugarContext;
 import com.orm.SugarRecord;
 
 /**
@@ -33,4 +34,5 @@ public class Compte extends SugarRecord {
     }
     public void setPrenom(String prenom) {
         this.prenom = prenom ; }
+
 }

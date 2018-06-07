@@ -16,15 +16,16 @@ public class Accueil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SugarContext.init(this) ;
 
         // Surcharge du XML pour créer la hiérarchie des composants graphiques
         setContentView(R.layout.accueil);
 
-        SugarContext.terminate();
-        SchemaGenerator schemaGenerator = new SchemaGenerator(getApplicationContext());
-        schemaGenerator.deleteTables(new SugarDb(getApplicationContext()).getDB());
-        SugarContext.init(getApplicationContext());
-        schemaGenerator.createDatabase(new SugarDb(getApplicationContext()).getDB());
+//        SugarContext.terminate();
+//        SchemaGenerator schemaGenerator = new SchemaGenerator(getApplicationContext());
+//        schemaGenerator.deleteTables(new SugarDb(getApplicationContext()).getDB());
+//        SugarContext.init(getApplicationContext());
+//        schemaGenerator.createDatabase(new SugarDb(getApplicationContext()).getDB());
 
         // Récupérer les objets de l'arbre graphique avec leur id
         Button creer = (Button) findViewById(R.id.a_bouton_nouv_compte) ;

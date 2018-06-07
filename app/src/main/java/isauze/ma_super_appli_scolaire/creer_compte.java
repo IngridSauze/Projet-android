@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import classes_base.Compte;
 
+
 public class creer_compte extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -32,6 +33,7 @@ public class creer_compte extends AppCompatActivity implements View.OnClickListe
 
         // Créer et sauvegarder le compte
         Compte compte = new Compte(nom.toString(), prenom.toString()) ;
+        //Compte compte = new Compte("a", "a") ;
         compte.save() ;
 
         // Basculer sur l'activité validation compte

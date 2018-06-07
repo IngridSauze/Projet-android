@@ -10,6 +10,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- SugarORM -->
+        <meta-data
+            android:name="DATABASE"
+            android:value="yolooh.db"/>
+        <meta-data
+            android:name="VERSION"
+            android:value="1"/>
+
+        <meta-data android:name="QUERY_LOG"
+            android:value="true"
+            />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="classes_base"/>
+
         <activity android:name=".Accueil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,11 +35,12 @@
         <activity android:name=".creer_compte" />
         <activity android:name=".validation_compte" />
         <activity android:name=".liste_exercices" />
-
-        <!-- SugarORM -->
         <activity android:name=".maths_accueil" />
         <activity android:name=".addition" />
         <activity android:name=".addition_1"></activity>
+
     </application>
+
+
 
 </manifest>
