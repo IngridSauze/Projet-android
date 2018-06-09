@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import classes_base.Compte;
+
 public class validation_compte extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -25,16 +27,16 @@ public class validation_compte extends AppCompatActivity implements View.OnClick
         exercices.setOnClickListener(this);
 
         // Récupérer les valeurs passées par l'intent
-        String prenom = getIntent().getStringExtra("PRENOM_C") ;
-        String nom = getIntent().getStringExtra("NOM_C") ;
+        //Bundle extra = get
+        int id = getIntent().getIntExtra("ID_COMPTE", 0) ;
+        Compte compte = Compte.findById(Compte.class, ((long) id)) ;
 
-        /**Compte compte = (Compte) Compte.findWithQuery(Compte.class, "SELECT nom, prenom FROM Compte WHERE nom = ? AND prenom = ?", nom, prenom) ;
-        if (compte != null) {
+        if(compte != null) {
             texte.setText("Bienvenue !");
         }
         else if (compte == null) {
             texte.setText("Erreur !");
-        } **/
+        }
     }
 
     @Override
@@ -42,6 +44,7 @@ public class validation_compte extends AppCompatActivity implements View.OnClick
         switch (v.getId()) { // récupération de l'id du bouton qui a été cliqué
             case R.id.v_accueil :
                 Intent intent = new Intent(this, Accueil.class) ;
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
                 startActivity(intent);
                 break;
 

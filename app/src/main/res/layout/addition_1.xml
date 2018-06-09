@@ -14,336 +14,340 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <TextView
-            android:id="@+id/ad1_texte"
+            <TextView
+                android:id="@+id/ad1_texte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text=""
+                android:padding="@dimen/interieur"
+                android:layout_margin="@dimen/exterieur"
+                />
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:text=""
-            android:padding="@dimen/interieur"
-            android:layout_margin="@dimen/exterieur"
-            />
-
-    <LinearLayout
-        android:id="@+id/ad1_champ1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        >
-
-        <TextView
-            android:id="@+id/ad1_1"
-            android:layout_width="@dimen/dimension_maths"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:text=""
-            android:padding="@dimen/interieur"
-            android:layout_margin="@dimen/exterieur"
-            />
-
-        <EditText
-            android:id="@+id/ad1_set1"
-            android:layout_width="@dimen/dimension_maths2"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:text=""
-            android:padding="@dimen/interieur"
-            android:layout_margin="@dimen/exterieur"
-            />
-
-    </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ad1_champ2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
-
-            <TextView
-                android:id="@+id/ad1_2"
-                android:layout_width="@dimen/dimension_maths"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ad1_champ1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-            <EditText
-                android:id="@+id/ad1_set2"
-                android:layout_width="@dimen/dimension_maths2"
+                <TextView
+                    android:id="@+id/ad1_1"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+                <EditText
+                    android:id="@+id/ad1_set1"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/ad1_2"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-        <LinearLayout
-            android:id="@+id/ad1_champ3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
+                <EditText
+                    android:id="@+id/ad1_set2"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-            <TextView
-                android:id="@+id/ad1_3"
-                android:layout_width="@dimen/dimension_maths"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-            <EditText
-                android:id="@+id/ad1_set3"
-                android:layout_width="@dimen/dimension_maths2"
+                <TextView
+                    android:id="@+id/ad1_3"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+                <EditText
+                    android:id="@+id/ad1_set3"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/ad1_4"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-        <LinearLayout
-            android:id="@+id/ad1_champ4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
+                <EditText
+                    android:id="@+id/ad1_set4"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-            <TextView
-                android:id="@+id/ad1_4"
-                android:layout_width="@dimen/dimension_maths"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ5"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-            <EditText
-                android:id="@+id/ad1_set4"
-                android:layout_width="@dimen/dimension_maths2"
+                <TextView
+                    android:id="@+id/ad1_5"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+                <EditText
+                    android:id="@+id/ad1_set5"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ6"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/ad1_6"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-        <LinearLayout
-            android:id="@+id/ad1_champ5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
+                <EditText
+                    android:id="@+id/ad1_set6"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-            <TextView
-                android:id="@+id/ad1_5"
-                android:layout_width="@dimen/dimension_maths"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ7"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-            <EditText
-                android:id="@+id/ad1_set5"
-                android:layout_width="@dimen/dimension_maths2"
+                <TextView
+                    android:id="@+id/ad1_7"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+                <EditText
+                    android:id="@+id/ad1_set7"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ8"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/ad1_8"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-        <LinearLayout
-            android:id="@+id/ad1_champ6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
+                <EditText
+                    android:id="@+id/ad1_set8"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-            <TextView
-                android:id="@+id/ad1_6"
-                android:layout_width="@dimen/dimension_maths"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ9"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-            <EditText
-                android:id="@+id/ad1_set6"
-                android:layout_width="@dimen/dimension_maths2"
+                <TextView
+                    android:id="@+id/ad1_9"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+                <EditText
+                    android:id="@+id/ad1_set9"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad1_champ10"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+                >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/ad1_10"
+                    android:layout_width="@dimen/dimension_maths"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-        <LinearLayout
-            android:id="@+id/ad1_champ7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
+                <EditText
+                    android:id="@+id/ad1_set10"
+                    android:layout_width="@dimen/dimension_maths2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text=""
+                    android:padding="@dimen/interieur"
+                    android:layout_margin="@dimen/exterieur"
+                    />
 
-            <TextView
-                android:id="@+id/ad1_7"
-                android:layout_width="@dimen/dimension_maths"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
+            </LinearLayout>
+        </ScrollView>
 
-            <EditText
-                android:id="@+id/ad1_set7"
-                android:layout_width="@dimen/dimension_maths2"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ad1_champ8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
-
-            <TextView
-                android:id="@+id/ad1_8"
-                android:layout_width="@dimen/dimension_maths"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
-
-            <EditText
-                android:id="@+id/ad1_set8"
-                android:layout_width="@dimen/dimension_maths2"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ad1_champ9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
-
-            <TextView
-                android:id="@+id/ad1_9"
-                android:layout_width="@dimen/dimension_maths"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
-
-            <EditText
-                android:id="@+id/ad1_set9"
-                android:layout_width="@dimen/dimension_maths2"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ad1_champ10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
-
-            <TextView
-                android:id="@+id/ad1_10"
-                android:layout_width="@dimen/dimension_maths"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
-
-            <EditText
-                android:id="@+id/ad1_set10"
-                android:layout_width="@dimen/dimension_maths2"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text=""
-                android:padding="@dimen/interieur"
-                android:layout_margin="@dimen/exterieur"
-                />
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/ad1_valider"
