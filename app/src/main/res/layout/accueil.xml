@@ -25,6 +25,16 @@
             android:layout_margin="@dimen/exterieur"
             />
 
+        <Button
+            android:id="@+id/a_bouton_nouv_compte"
+            android:layout_width="@dimen/b_largeur"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/a_creer_compte"
+            android:padding="@dimen/interieur"
+            android:layout_margin="@dimen/exterieur"
+            />
+
         <TextView
             android:id="@+id/a_choix"
             android:layout_width="match_parent"
@@ -39,18 +49,9 @@
         <ListView
             android:id="@+id/a_liste"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </ListView>
-
-        <Button
-            android:id="@+id/a_bouton_nouv_compte"
-            android:layout_width="@dimen/b_largeur"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/a_creer_compte"
-            android:padding="@dimen/interieur"
-            android:layout_margin="@dimen/exterieur"
-            />
+            >
+        </ListView>
 
         <Button
             android:id="@+id/a_liste_ex"
