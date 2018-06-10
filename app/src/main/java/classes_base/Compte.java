@@ -16,9 +16,10 @@ public class Compte extends SugarRecord {
     public Compte() {
     }
 
-   public Compte(String nom, String prenom) {
+   public Compte(String nom, String prenom, String avatar) {
         setNom(nom) ;
         setPrenom(prenom) ;
+        setAvatar(avatar);
     }
 
     // Get
@@ -40,4 +41,7 @@ public class Compte extends SugarRecord {
     public void setPrenom(String prenom) {
         this.prenom = prenom ; }
 
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 }

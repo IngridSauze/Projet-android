@@ -12,4 +12,8 @@ public class CompteDAO {
     public static List<Compte> selectTous() {
         return Compte.listAll(Compte.class, "prenom") ;
     }
+
+    public static List<Compte> selectCompte(String prenom, String nom) {
+        return Compte.findWithQuery(Compte.class, "Select * from Compte where nom = ? and prenom = ?", nom, prenom) ;
+    }
 }

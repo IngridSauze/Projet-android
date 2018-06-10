@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -26,32 +27,28 @@ public class Compte_adapter extends ArrayAdapter<Compte> {
         public View getView(int position, View convertView, ViewGroup parent) {
 
             if(convertView == null){
-                convertView = LayoutInflater.from(getContext()).inflate(R.layout.row_tweet,parent, false);
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.compte_vue,parent, false);
             }
 
-            TweetViewHolder viewHolder = (TweetViewHolder) convertView.getTag();
+            CompteViewHolder viewHolder = (CompteViewHolder) convertView.getTag();
             if(viewHolder == null){
-                viewHolder = new TweetViewHolder();
-                viewHolder.pseudo = (TextView) convertView.findViewById(R.id.pseudo);
-                viewHolder.text = (TextView) convertView.findViewById(R.id.text);
-                viewHolder.avatar = (ImageView) convertView.findViewById(R.id.avatar);
+                viewHolder = new CompteViewHolder();
+                viewHolder.prenom = (TextView) convertView.findViewById(R.id.compte_texte);
+                viewHolder.nom = (TextView) convertView.findViewById(R.id.compte_texte2);
+                viewHolder.avatar = (ImageView) convertView.findViewById(R.id.compte_image);
                 convertView.setTag(viewHolder);
             }
 
             //getItem(position) va récupérer l'item [position] de la List<Tweet> tweets
-            Tweet tweet = getItem(position);
+            Compte compte = getItem(position);
 
             //il ne reste plus qu'à remplir notre vue
-            viewHolder.pseudo.setText(tweet.getPseudo());
-            viewHolder.text.setText(tweet.getText());
-            viewHolder.avatar.setImageDrawable(new ColorDrawable(tweet.getColor()));
+            viewHolder.prenom.setText(compte.getPrenom());
+            viewHolder.nom.setText(compte.getNom());
+            //viewHolder.avatar.setImageDrawable(new ColorDrawable(tweet.getColor()));
 
             return convertView;
         }
 
 
 }
-
-    private class CompteViewHolder{
-        public ImageView avatar;
-    }

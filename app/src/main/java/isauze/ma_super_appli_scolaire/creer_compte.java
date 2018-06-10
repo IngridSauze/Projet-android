@@ -32,7 +32,7 @@ public class creer_compte extends AppCompatActivity implements View.OnClickListe
         final TextView nom = (TextView) findViewById(R.id.c_champ_nom) ;
 
         // Créer et sauvegarder le compte
-        Compte compte = new Compte(prenom.getText().toString(), nom.getText().toString()) ;
+        Compte compte = new Compte(nom.getText().toString(), prenom.getText().toString(), "avatar") ;
         long id = compte.save() ;
 
         // Basculer sur l'activité validation compte

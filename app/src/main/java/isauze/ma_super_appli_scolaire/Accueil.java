@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.orm.SchemaGenerator;
 import com.orm.SugarContext;
@@ -40,18 +42,28 @@ public class Accueil extends AppCompatActivity {
         // Récupérer les objets de l'arbre graphique avec leur id
         final Button creer = (Button) findViewById(R.id.a_bouton_nouv_compte) ;
         final Button exercices = (Button) findViewById(R.id.a_liste_ex) ;
+        final TextView texte = (TextView) findViewById(R.id.a_choix) ;
+
+        texte.setVisibility(View.INVISIBLE);
 
         // Si l'utilisateur n'est pas connecté
         if(id == 0) {
+            // Rendre invisible le texte de choix du compte
+            texte.setVisibility(View.VISIBLE);
             // Récupération de la ListView
             final ListView listeView = (ListView) findViewById(R.id.a_liste) ;
             List<Compte> liste_comptes = selectTous() ; // liste de tous les comptes
             if(!(liste_comptes.isEmpty())) {
-                Compte[] comptes = new Compte[liste_comptes.size()]; // tableau pour stocker les comptes
-                for (int i = 0 ; i < liste_comptes.size() ; i ++) {
-                    comptes[i] = liste_comptes.get(i) ;
-                }
+                Compte_adapter adapter = new Compte_adapter(Accueil.this, liste_comptes);
+                listeView.setAdapter(adapter);
+                listeView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                    }
+                });
             }
+
 
             // Basculer sur la page de création du compte en cas de clic sur le bouton
             creer.setOnClickListener(new View.OnClickListener() {
