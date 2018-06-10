@@ -4,55 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="isauze.ma_super_appli_scolaire.Accueil">
+    tools:context="isauze.ma_super_appli_scolaire.addition_2">
 
     <LinearLayout
-        android:id="@+id/a_accueil"
-        android:layout_width="match_parent"
+        android:id="@+id/ad_addition_2"
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/a_texte_accueil"
+            android:id="@+id/ad2_texte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:text="@string/a_bienvenue"
+            android:text="@string/ad_consigne"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />
 
         <TextView
+            android:id="@+id/ad2_resultat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:text="@string/a_choix_compte"
+            android:text=""
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />
 
-        <ListView
-            android:id="@+id/a_liste"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </ListView>
-
         <Button
-            android:id="@+id/a_bouton_nouv_compte"
+            android:id="@+id/ad2_accueil"
             android:layout_width="@dimen/b_largeur"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/a_creer_compte"
+            android:text="@string/b_accueil"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />
 
         <Button
-            android:id="@+id/a_liste_ex"
+            android:id="@+id/ad2_liste_maths"
+            android:layout_width="@dimen/b_largeur"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/l_mathematiques"
+            android:padding="@dimen/interieur"
+            android:layout_margin="@dimen/exterieur"
+            />
+
+        <Button
+            android:id="@+id/ad2_liste_ex"
             android:layout_width="@dimen/b_largeur"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -61,6 +66,5 @@
             android:layout_margin="@dimen/exterieur"
             />
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>

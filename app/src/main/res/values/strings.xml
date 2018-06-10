@@ -32,6 +32,7 @@
 
     <!--- Additions -->
     <string name="ad_consigne">Choisis la table d\'addition que tu veux réviser.</string>
+    <string name="ad2_ex_maths">Mathématiques</string>
 
     <!--- Boutons généraux -->
     <string name="b_valider">Valider</string>

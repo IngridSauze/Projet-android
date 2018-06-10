@@ -18,6 +18,9 @@ public class addition extends AppCompatActivity {
         final Button valider = (Button) findViewById(R.id.ad_valider) ;
         final NumberPicker np = (NumberPicker) findViewById(R.id.ad_num);
 
+        // Récupérer les valeurs passées par l'intent
+        final int id = getIntent().getIntExtra("ID_COMPTE", 0) ;
+
         // Maximum et minimum
         np.setMaxValue(10);
         np.setMinValue(1);
@@ -29,7 +32,8 @@ public class addition extends AppCompatActivity {
             public void onClick(View v) {
                 // Création de l'intention
                 Intent intent = new Intent(addition.this, addition_1.class) ;
-                intent.putExtra("TABLE", np.getValue()) ;
+                intent.putExtra("ID_COMPTE", id) ;
+                intent.putExtra("TABLE", ((int) np.getValue())) ;
                 startActivity(intent);
             }
         }

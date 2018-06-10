@@ -19,12 +19,16 @@ public class maths_accueil extends AppCompatActivity {
         final Button multiplication = (Button) findViewById(R.id.am_b_multiplication);
         final Button division = (Button) findViewById(R.id.am_b_division);
 
+        // Récupérer les valeurs passées par l'intent
+        final int id = getIntent().getIntExtra("ID_COMPTE", 0) ;
+
         // Basculer sur la page de l'exercice en cas de clic sur le bouton
         addition.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
                                             // Création de l'intention
                                             Intent intent = new Intent(maths_accueil.this, addition.class);
+                                            intent.putExtra("ID_COMPTE", id) ;
                                             startActivity(intent);
                                         }
                                     }

@@ -10,6 +10,7 @@ import com.orm.SugarRecord;
 public class Compte extends SugarRecord {
     private String nom ;
     private String prenom ;
+    private String avatar ;
 
     // Constructeurs
     public Compte() {
@@ -27,11 +28,15 @@ public class Compte extends SugarRecord {
     public String getPrenom() {
         return prenom ;
     }
+    public String getAvatar() {
+        return avatar ;
+    }
 
     // Set
     public void setNom(String nom) {
         this.nom = nom ;
     }
+
     public void setPrenom(String prenom) {
         this.prenom = prenom ; }
 

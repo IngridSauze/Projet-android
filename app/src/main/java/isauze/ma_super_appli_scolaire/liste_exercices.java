@@ -24,14 +24,17 @@ public class liste_exercices extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
+        int id = getIntent().getIntExtra("ID_COMPTE", 0) ; // Récupérer les valeurs passées par l'intent
         switch (v.getId()) { // récupération de l'id du bouton qui a été cliqué
             case R.id.l_maths :
                 Intent intent = new Intent(this, maths_accueil.class) ;
+                intent.putExtra("ID_COMPTE", id) ;
                 startActivity(intent);
                 break;
 
             case R.id.l_culture_g :
                 Intent intent1 = new Intent(this, liste_exercices.class) ;
+                intent1.putExtra("ID_COMPTE", id) ;
                 startActivity(intent1);
                 break;
         }
