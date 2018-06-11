@@ -33,7 +33,7 @@ public class liste_exercices extends AppCompatActivity implements View.OnClickLi
                 break;
 
             case R.id.l_culture_g :
-                Intent intent1 = new Intent(this, liste_exercices.class) ;
+                Intent intent1 = new Intent(this, culture_generale.class) ;
                 intent1.putExtra("ID_COMPTE", id) ;
                 startActivity(intent1);
                 break;

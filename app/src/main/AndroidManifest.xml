@@ -38,7 +38,8 @@
         <activity android:name=".maths_accueil" />
         <activity android:name=".addition" />
         <activity android:name=".addition_1" />
-        <activity android:name=".addition_2"></activity>
+        <activity android:name=".addition_2" />
+        <activity android:name=".culture_generale"></activity>
     </application>
 
 </manifest>

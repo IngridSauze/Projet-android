@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:text="@string/c_prenom"
+            android:hint="@string/c_prenom"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:text="@string/c_nom"
+            android:hint="@string/c_nom"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
             />

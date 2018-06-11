@@ -64,7 +64,7 @@ public class Accueil extends AppCompatActivity {
                         String n = adapter.getItem(i).getNom();
                         String p = adapter.getItem(i).getPrenom();
                         List<Compte> c = selectCompte(p, n);
-                        if (c.size() == 1) {
+                        if (c.size() > 0) {
                             int c_id = c.get(0).getId().intValue();
                             Intent intent = new Intent(Accueil.this, liste_exercices.class);
                             intent.putExtra("ID_COMPTE", c_id);
