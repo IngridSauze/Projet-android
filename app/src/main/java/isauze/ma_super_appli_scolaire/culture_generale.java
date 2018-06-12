@@ -90,18 +90,18 @@ public class culture_generale extends AppCompatActivity {
                         if(res1.size()== 1) {
                             Resultat res = res1.get(0) ; // Récupération du résultat de l'utilisateur
                             if (res.getCulture() >= 10-erreurs) {
-                                texte.setText("Votre record à cet exercice est de " + res.getCulture() + ".");
+                                texte.setText("Votre record à cet exercice est de " + res.getCulture() + " et votre score est de " + (10 - erreurs) + ".");
                             }
                             else {
                                 res.setCulture_g(10-erreurs);
                                 res.save() ;
-                                texte.setText("Votre record à cet exercice est de " + res.getCulture() + ".");
+                                texte.setText("Votre record à cet exercice est de " + res.getCulture() + " et votre score est de " + (10 - erreurs) + ".");
                             }
                         }
                         else if(res1.size()== 0) {
                             Resultat res2 = new Resultat("culture_g", (long) id, 10-erreurs) ;
                             res2.save();
-                            texte.setText("Votre record à cet exercice est de " + res2.getCulture() + ".");
+                            texte.setText("Votre record à cet exercice est de " + res2.getCulture() + " et votre score est de " + (10 - erreurs) + ".");
                         }
                         else {
                             texte.setText("Impossible d'afficher le score.");
