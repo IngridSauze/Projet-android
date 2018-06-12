@@ -25,6 +25,17 @@
             android:layout_margin="@dimen/exterieur"
             />
 
+        <TextView
+            android:id="@+id/g_alerte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text=""
+            android:padding="@dimen/interieur"
+            android:layout_margin="@dimen/exterieur"
+            />
+
         <RadioGroup
             android:id="@+id/g_groupe"
             android:layout_width="match_parent"

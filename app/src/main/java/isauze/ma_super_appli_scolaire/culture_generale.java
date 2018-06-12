@@ -9,43 +9,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 import classes_base.Resultat;
 
 import static classes_base.ResultatDAO.selectRes;
 
 public class culture_generale extends AppCompatActivity {
-    private String[] questions = {"Quelle est la date de la bataille de Marignan ?",
-            "Quel pays n'est pas situé en Europe ?",
-            "Quelle est la capitale de l'Allemagne ?",
-            "Quel est le plus lourd : un kilo de plumes ou un kilo de plomb ?",
-            "Qui est le premier empereur de Rome ?",
-            "Qui a été le dernier roi des Français ?",
-            "Quel était le titre du fils de Napoléon Ier ?",
-            "Quel est le successeur d'Akhénaton ?",
-            "Quel fut le prédécesseur de Toutankhamon ?",
-            "Combien font deux plus trois ?",
-            "Quel est la date de la révolution française ?",
-            "Comment s'appelle l'hymne national français ?",
-            "Quel est le fondateur de la Cinquième République ?"
-    };
-
-    private String[] reponse = {
-            "1515", "Pérou", "Berlin", "Ni l'un ni l'autre", "Auguste", "Louis-Philippe Ier", "Roi de Rome", "Smenkharê",
-            "Smenkharê", "5", "1789", "La Marseillaise", "Charles de Gaulle"
-    };
-
-    private String[] faux1 = {
-            "1456", "Italie", "Paris", "Les plumes", "Jules César", "Louis XVI", "Prince de Padoue", "Toutankhamon",
-            "Akhénaton", "15", "1790", "God Save the Queen", "Georges Pompidou"
-    };
-
-    private String[] faux2 = {
-            "1517", "Pologne", "Oslo", "Le plomb", "Romulus Augustule", "Louis XVIII", "Prince de Corse", "Ramsès XVII",
-            "Toutencarton", "2", "1678", "Le Chant des Partisans", "Vincent Auriol"
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +32,7 @@ public class culture_generale extends AppCompatActivity {
         final Button exercices = (Button) findViewById(R.id.g_exercice);
         final Button accueil = (Button) findViewById(R.id.g_b_accueil);
         final TextView texte = (TextView) findViewById(R.id.g_texte_accueil_ac);
+        final TextView alerte = (TextView) findViewById(R.id.g_alerte);
         final RadioGroup groupe = (RadioGroup) findViewById(R.id.g_groupe);
         final RadioButton radio1 = (RadioButton) findViewById(R.id.g_radio1);
         final RadioButton radio2 = (RadioButton) findViewById(R.id.g_radio2);
@@ -68,15 +41,16 @@ public class culture_generale extends AppCompatActivity {
         exercices.setVisibility(View.INVISIBLE);
         accueil.setVisibility(View.INVISIBLE);
 
-        // Mise en place des questions
-        // Hasard
-        Random r_question = new Random();
-        int valeur = 0 + r_question.nextInt(questions.length - 0);
+        // Mise en place des questionss
+        Questions[] questions = Questions.values() ;
+        final List<Questions> l_questions = Arrays.asList(questions);
+        Collections.shuffle(l_questions);
 
-        texte.setText(questions[valeur]);
-        radio1.setText(reponse[valeur]);
-        radio2.setText(faux1[valeur]);
-        radio3.setText(faux2[valeur]);
+        texte.setText(l_questions.get(0).getNom());
+        radio1.setText(l_questions.get(0).getTab()[0]);
+        radio2.setText(l_questions.get(0).getTab()[1]);
+        radio3.setText(l_questions.get(0).getTab()[2]);
+        final String reponse = l_questions.get(0).getReponse() ;
 
         valider.setOnClickListener(new View.OnClickListener() {
             int erreurs = 0;
@@ -84,44 +58,54 @@ public class culture_generale extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                RadioButton r = (RadioButton) groupe.getChildAt(groupe.getCheckedRadioButtonId());
-                if (nb_question < 10) {
-                    if (!(radio1.isChecked())) {
-                        erreurs++;
-                    }
-                    Random r_question = new Random();
-                    int valeur = 0 + r_question.nextInt(questions.length - 0);
-                    texte.setText(questions[valeur]);
-                    radio1.setText(reponse[valeur]);
-                    radio2.setText(faux1[valeur]);
-                    radio3.setText(faux2[valeur]);
-                    nb_question++;
+                if (!(radio1.isChecked())&& !(radio2.isChecked()) && !(radio3.isChecked())) {
+                    alerte.setText("Il faut choisir une réponse ! ");
                 }
                 else {
-                    groupe.setVisibility(View.INVISIBLE);
-                    exercices.setVisibility(View.VISIBLE);
-                    accueil.setVisibility(View.VISIBLE);
-                    valider.setVisibility(View.INVISIBLE);
+                    if (nb_question < 10) {
+                        if (radio1.isChecked() && !(radio1.getText().equals(reponse))) {
+                            erreurs++ ;
+                        }
+                        else if (radio2.isChecked() && !(radio2.getText().equals(reponse))) {
+                            erreurs++ ;
+                        }
+                        if (radio3.isChecked() && !(radio3.getText().equals(reponse))) {
+                            erreurs++ ;
+                        }
 
-                    List<Resultat> res1 = selectRes(id) ;
-                    if(res1.size()== 1) {
-                        Resultat res = res1.get(0) ; // Récupération du résultat de l'utilisateur
-                        if (res.getCulture() >= 10-erreurs) {
-                            texte.setText("Votre record à cet exercice est de " + res.getCulture() + ".");
-                        }
-                        else {
-                            res.setCulture_g(10-erreurs);
-                            res.save() ;
-                            texte.setText("Votre record à cet exercice est de " + res.getCulture() + ".");
-                        }
-                    }
-                    else if(res1.size()== 0) {
-                        Resultat res2 = new Resultat("culture_g", (long) id, 10-erreurs) ;
-                        res2.save();
-                        texte.setText("Votre record à cet exercice est de " + res2.getCulture() + ".");
+                        texte.setText(l_questions.get(nb_question+1).getNom());
+                        radio1.setText(l_questions.get(nb_question+1).getTab()[0]);
+                        radio2.setText(l_questions.get(nb_question+1).getTab()[1]);
+                        radio3.setText(l_questions.get(nb_question+1).getTab()[2]);
+                        final String reponse = l_questions.get(nb_question+1).getReponse() ;
+                        nb_question++;
                     }
                     else {
-                        texte.setText("Impossible d'afficher le score.");
+                        groupe.setVisibility(View.INVISIBLE);
+                        exercices.setVisibility(View.VISIBLE);
+                        accueil.setVisibility(View.VISIBLE);
+                        valider.setVisibility(View.INVISIBLE);
+
+                        List<Resultat> res1 = selectRes(id) ;
+                        if(res1.size()== 1) {
+                            Resultat res = res1.get(0) ; // Récupération du résultat de l'utilisateur
+                            if (res.getCulture() >= 10-erreurs) {
+                                texte.setText("Votre record à cet exercice est de " + res.getCulture() + ".");
+                            }
+                            else {
+                                res.setCulture_g(10-erreurs);
+                                res.save() ;
+                                texte.setText("Votre record à cet exercice est de " + res.getCulture() + ".");
+                            }
+                        }
+                        else if(res1.size()== 0) {
+                            Resultat res2 = new Resultat("culture_g", (long) id, 10-erreurs) ;
+                            res2.save();
+                            texte.setText("Votre record à cet exercice est de " + res2.getCulture() + ".");
+                        }
+                        else {
+                            texte.setText("Impossible d'afficher le score.");
+                        }
                     }
                 }
             }
