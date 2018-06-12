@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="isauze.ma_super_appli_scolaire.maths_accueil">
+    tools:context="isauze.ma_super_appli_scolaire.maths_accueil"
+    android:background="@drawable/mulan_f">
 
     <LinearLayout
         android:id="@+id/l_accueil_maths"
@@ -12,7 +13,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_centerInParent="true">
 
         <TextView
             android:id="@+id/am_texte_accueil"
@@ -68,4 +70,4 @@
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

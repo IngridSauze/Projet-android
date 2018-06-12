@@ -16,5 +16,7 @@
     <dimen name="dimension_maths">150dp</dimen>
     <dimen name="dimension_maths2">80dp</dimen>
 
-    <!-- -->
+    <!-- Dimensions compte -->
+    <dimen name="c_largeur">250dp</dimen>
+    <dimen name="c_hauteur">50dp</dimen>
 </resources>

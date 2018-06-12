@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="isauze.ma_super_appli_scolaire.addition_1"
+    android:background="@drawable/mulan_f"
     >
 
     <LinearLayout
@@ -15,6 +16,7 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp"
         android:layout_gravity="center"
+        android:layout_centerInParent="true"
         >
 
         <TextView

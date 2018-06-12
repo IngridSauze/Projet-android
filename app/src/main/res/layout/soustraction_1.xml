@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="isauze.ma_super_appli_scolaire.soustraction">
+    tools:context="isauze.ma_super_appli_scolaire.soustraction"
+    android:background="@drawable/mulan_f">
 
     <LinearLayout
         android:id="@+id/s1_page"
@@ -13,6 +14,7 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp"
+        android:layout_centerInParent="true"
         >
 
         <TextView

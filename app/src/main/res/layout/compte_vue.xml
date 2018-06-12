@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    >
 
 <ImageView
     android:id="@+id/compte_image"
@@ -14,34 +16,36 @@
     />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/c_largeur"
+        android:layout_height="@dimen/c_hauteur"
         android:orientation="horizontal"
         android:padding="@dimen/interieur"
         android:layout_margin="@dimen/exterieur"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        >
 
     <TextView
         android:id="@+id/compte_texte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/interieur"
-        android:layout_margin="@dimen/exterieur"
         android:layout_gravity="center"
         android:textAlignment="center"
         android:text=""
+        android:textColor="@color/white"
+        android:textSize="30dp"
         />
 
     <TextView
         android:id="@+id/compte_texte2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/interieur"
-        android:layout_margin="@dimen/exterieur"
         android:layout_gravity="center"
         android:textAlignment="center"
         android:text=""
+        android:textColor="@color/white"
+        android:textSize="30dp"
         />
         </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
