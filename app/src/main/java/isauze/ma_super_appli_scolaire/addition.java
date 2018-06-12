@@ -15,11 +15,11 @@ public class addition extends AppCompatActivity {
         setContentView(R.layout.addition);
 
         // Récupérer les objets de l'arbre graphique avec leur id
-        final Button valider = (Button) findViewById(R.id.ad_valider) ;
+        final Button valider = (Button) findViewById(R.id.ad_valider);
         final NumberPicker np = (NumberPicker) findViewById(R.id.ad_num);
 
         // Récupérer les valeurs passées par l'intent
-        final int id = getIntent().getIntExtra("ID_COMPTE", 0) ;
+        final int id = getIntent().getIntExtra("ID_COMPTE", 0);
 
         // Maximum et minimum
         np.setMaxValue(10);
@@ -28,16 +28,16 @@ public class addition extends AppCompatActivity {
 
         // Basculer sur la page de l'exercice en cas de clic sur le bouton
         valider.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Création de l'intention
-                Intent intent = new Intent(addition.this, addition_1.class) ;
-                intent.putExtra("ID_COMPTE", id) ;
-                intent.putExtra("TABLE", ((int) np.getValue())) ;
-                startActivity(intent);
-            }
-        }
-        ) ;
+                                       @Override
+                                       public void onClick(View v) {
+                                           // Création de l'intention
+                                           Intent intent = new Intent(addition.this, addition_1.class);
+                                           intent.putExtra("ID_COMPTE", id);
+                                           intent.putExtra("TABLE", ((int) np.getValue()));
+                                           startActivity(intent);
+                                       }
+                                   }
+        );
     }
-    }
+}
 
