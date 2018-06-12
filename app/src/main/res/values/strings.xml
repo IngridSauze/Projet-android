@@ -30,8 +30,11 @@
     <string name="am_multiplication">Multiplication</string>
     <string name="am_division">Division</string>
 
-    <!--- Additions -->
+    <!--- Mathématiques -->
     <string name="ad_consigne">Choisis la table d\'addition que tu veux réviser.</string>
+    <string name="m_consigne">Choisis la table de multiplication que tu veux réviser.</string>
+    <string name="d_consigne">Choisis la table de division que tu veux réviser.</string>
+    <string name="s_consigne">Choisis la table de soustraction que tu veux réviser.</string>
     <string name="ad2_ex_maths">Mathématiques</string>
 
     <!--- Boutons généraux -->

@@ -39,7 +39,16 @@
         <activity android:name=".addition" />
         <activity android:name=".addition_1" />
         <activity android:name=".addition_2" />
-        <activity android:name=".culture_generale"></activity>
+        <activity android:name=".culture_generale" />
+        <activity android:name=".multiplication" />
+        <activity android:name=".multiplication_1" />
+        <activity android:name=".multiplication_2" />
+        <activity android:name=".division" />
+        <activity android:name=".division_1" />
+        <activity android:name=".division_2" />
+        <activity android:name=".soustraction" />
+        <activity android:name=".soustraction_1" />
+        <activity android:name=".soustraction_2"></activity>
     </application>
 
 </manifest>

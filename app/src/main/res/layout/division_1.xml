@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="isauze.ma_super_appli_scolaire.addition_1">
+    tools:context="isauze.ma_super_appli_scolaire.division_1">
 
     <LinearLayout
-        android:id="@+id/ad1_page"
+        android:id="@+id/d1_page"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -22,7 +22,7 @@
             android:textAlignment="center"
             android:padding="@dimen/interieur"
             android:layout_margin="@dimen/exterieur"
-            android:text="Additions"
+            android:text="Divisions"
             />
 
         <ScrollView
@@ -43,7 +43,7 @@
                 >
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ1"
+                    android:id="@+id/d1_champ1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -51,7 +51,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_1"
+                        android:id="@+id/d1_1"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -62,7 +62,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set1"
+                        android:id="@+id/d1_set1"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -76,7 +76,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ2"
+                    android:id="@+id/d1_champ2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -84,7 +84,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_2"
+                        android:id="@+id/d1_2"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -95,7 +95,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set2"
+                        android:id="@+id/d1_set2"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -109,7 +109,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ3"
+                    android:id="@+id/d1_champ3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -117,7 +117,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_3"
+                        android:id="@+id/d1_3"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -128,7 +128,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set3"
+                        android:id="@+id/d1_set3"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -142,7 +142,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ4"
+                    android:id="@+id/d1_champ4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -150,7 +150,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_4"
+                        android:id="@+id/d1_4"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -161,7 +161,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set4"
+                        android:id="@+id/d1_set4"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -175,7 +175,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ5"
+                    android:id="@+id/d1_champ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -183,7 +183,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_5"
+                        android:id="@+id/d1_5"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -194,7 +194,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set5"
+                        android:id="@+id/d1_set5"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -208,7 +208,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ6"
+                    android:id="@+id/d1_champ6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -216,7 +216,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_6"
+                        android:id="@+id/d1_6"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -227,7 +227,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set6"
+                        android:id="@+id/d1_set6"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -241,7 +241,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ7"
+                    android:id="@+id/d1_champ7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -249,7 +249,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_7"
+                        android:id="@+id/d1_7"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -260,7 +260,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set7"
+                        android:id="@+id/d1_set7"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -274,7 +274,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ8"
+                    android:id="@+id/d1_champ8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -282,7 +282,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_8"
+                        android:id="@+id/d1_8"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -293,7 +293,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set8"
+                        android:id="@+id/d1_set8"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -307,7 +307,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ9"
+                    android:id="@+id/d1_champ9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -315,7 +315,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_9"
+                        android:id="@+id/d1_9"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -326,7 +326,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set9"
+                        android:id="@+id/d1_set9"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -340,7 +340,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ad1_champ10"
+                    android:id="@+id/d1_champ10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -348,7 +348,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/ad1_10"
+                        android:id="@+id/d1_10"
                         android:layout_width="@dimen/dimension_maths"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -359,7 +359,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/ad1_set10"
+                        android:id="@+id/d1_set10"
                         android:layout_width="@dimen/dimension_maths2"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -372,7 +372,7 @@
 
                 </LinearLayout>
                 <Button
-                    android:id="@+id/ad1_valider"
+                    android:id="@+id/d1_valider"
                     android:layout_width="@dimen/b_largeur"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

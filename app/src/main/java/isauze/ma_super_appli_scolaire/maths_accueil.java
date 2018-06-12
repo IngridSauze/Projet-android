@@ -34,5 +34,16 @@ public class maths_accueil extends AppCompatActivity {
                                     }
         );
 
+        multiplication.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            // Création de l'intention
+                                            Intent intent = new Intent(maths_accueil.this, addition.class);
+                                            intent.putExtra("ID_COMPTE", id) ;
+                                            startActivity(intent);
+                                        }
+                                    }
+        );
+
     }
 }
