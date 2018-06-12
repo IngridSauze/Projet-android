@@ -38,12 +38,33 @@ public class maths_accueil extends AppCompatActivity {
                                         @Override
                                         public void onClick(View v) {
                                             // Création de l'intention
-                                            Intent intent = new Intent(maths_accueil.this, addition.class);
+                                            Intent intent = new Intent(maths_accueil.this, multiplication.class);
                                             intent.putExtra("ID_COMPTE", id) ;
                                             startActivity(intent);
                                         }
                                     }
         );
 
+        soustraction.setOnClickListener(new View.OnClickListener() {
+                                              @Override
+                                              public void onClick(View v) {
+                                                  // Création de l'intention
+                                                  Intent intent = new Intent(maths_accueil.this, soustraction.class);
+                                                  intent.putExtra("ID_COMPTE", id) ;
+                                                  startActivity(intent);
+                                              }
+                                          }
+        );
+
+        division.setOnClickListener(new View.OnClickListener() {
+                                              @Override
+                                              public void onClick(View v) {
+                                                  // Création de l'intention
+                                                  Intent intent = new Intent(maths_accueil.this, division.class);
+                                                  intent.putExtra("ID_COMPTE", id) ;
+                                                  startActivity(intent);
+                                              }
+                                          }
+        );
     }
 }
