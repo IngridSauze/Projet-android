@@ -17,6 +17,7 @@ public class division_1 extends AppCompatActivity {
 
         // Récupérer les objets de l'arbre graphique avec leur id
         final Button valider = (Button) findViewById(R.id.d1_valider) ;
+        final TextView texte0 = (TextView) findViewById(R.id.d1_texte) ;
 
         final EditText edit1  = (EditText) findViewById(R.id.d1_set1) ;
         final EditText edit2  = (EditText) findViewById(R.id.d1_set2) ;
@@ -59,44 +60,60 @@ public class division_1 extends AppCompatActivity {
         valider.setOnClickListener(new View.OnClickListener() {
                                        @Override
                                        public void onClick(View v) {
-                                           int erreurs = 0 ;
-                                           // Vérification des résultats
-                                           if(!test_division(table, 1 * table, Integer.parseInt(edit1.getText().toString()))) {
-                                               erreurs++ ;
+                                           if (
+                                                   edit1.getText().toString().equals("") ||
+                                                           edit2.getText().toString().equals("") ||
+                                                           edit3.getText().toString().equals("") ||
+                                                           edit4.getText().toString().equals("") ||
+                                                           edit5.getText().toString().equals("") ||
+                                                           edit6.getText().toString().equals("") ||
+                                                           edit7.getText().toString().equals("") ||
+                                                           edit8.getText().toString().equals("") ||
+                                                           edit9.getText().toString().equals("") ||
+                                                           edit10.getText().toString().equals("")
+                                                   ) {
+                                               texte0.setText("Il faut répondre à toutes les questions !");
                                            }
-                                           if(!test_division(table, 2 * table, Integer.parseInt(edit2.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_division(table, 3 * table, Integer.parseInt(edit3.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_division(table, 4 * table, Integer.parseInt(edit4.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_division(table, 5 * table, Integer.parseInt(edit5.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_division(table, 6 * table, Integer.parseInt(edit6.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_division(table, 7 * table, Integer.parseInt(edit7.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_division(table, 8 * table, Integer.parseInt(edit8.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_division(table, 9 * table, Integer.parseInt(edit9.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_division(table, 10 * table, Integer.parseInt(edit10.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
+                                            else {
+                                               int erreurs = 0;
+                                               // Vérification des résultats
+                                               if (!test_division(table, 1 * table, Integer.parseInt(edit1.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 2 * table, Integer.parseInt(edit2.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 3 * table, Integer.parseInt(edit3.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 4 * table, Integer.parseInt(edit4.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 5 * table, Integer.parseInt(edit5.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 6 * table, Integer.parseInt(edit6.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 7 * table, Integer.parseInt(edit7.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 8 * table, Integer.parseInt(edit8.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 9 * table, Integer.parseInt(edit9.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_division(table, 10 * table, Integer.parseInt(edit10.getText().toString()))) {
+                                                   erreurs++;
+                                               }
 
-                                           // Création de l'intention
-                                           Intent intent = new Intent(division_1.this, division_2.class);
-                                           intent.putExtra("ERREURS", erreurs) ;
-                                           intent.putExtra("ID_COMPTE", id) ;
-                                           startActivity(intent);
+                                               // Création de l'intention
+                                               Intent intent = new Intent(division_1.this, division_2.class);
+                                               intent.putExtra("ERREURS", erreurs);
+                                               intent.putExtra("ID_COMPTE", id);
+                                               startActivity(intent);
+                                           }
                                        }
                                    }
         );

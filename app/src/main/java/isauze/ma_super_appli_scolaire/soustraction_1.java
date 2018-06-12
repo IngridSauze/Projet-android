@@ -14,6 +14,7 @@ public class soustraction_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soustraction_1);
+        final TextView texte0 = (TextView) findViewById(R.id.s1_texte) ;
 
         // Récupérer les objets de l'arbre graphique avec leur id
         final Button valider = (Button) findViewById(R.id.s1_valider) ;
@@ -59,44 +60,60 @@ public class soustraction_1 extends AppCompatActivity {
         valider.setOnClickListener(new View.OnClickListener() {
                                        @Override
                                        public void onClick(View v) {
-                                           int erreurs = 0 ;
-                                           // Vérification des résultats
-                                           if(!test_soustraction(table, 1+table, Integer.parseInt(edit1.getText().toString()))) {
-                                               erreurs++ ;
+                                           if (
+                                                   edit1.getText().toString().equals("") ||
+                                                           edit2.getText().toString().equals("") ||
+                                                           edit3.getText().toString().equals("") ||
+                                                           edit4.getText().toString().equals("") ||
+                                                           edit5.getText().toString().equals("") ||
+                                                           edit6.getText().toString().equals("") ||
+                                                           edit7.getText().toString().equals("") ||
+                                                           edit8.getText().toString().equals("") ||
+                                                           edit9.getText().toString().equals("") ||
+                                                           edit10.getText().toString().equals("")
+                                                   ) {
+                                               texte0.setText("Il faut répondre à toutes les questions !");
                                            }
-                                           if(!test_soustraction(table, 2+table, Integer.parseInt(edit2.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_soustraction(table, 3+table, Integer.parseInt(edit3.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_soustraction(table, 4+table, Integer.parseInt(edit4.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_soustraction(table, 5+table, Integer.parseInt(edit5.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_soustraction(table, 6+table, Integer.parseInt(edit6.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_soustraction(table, 7+table, Integer.parseInt(edit7.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_soustraction(table, 8+table, Integer.parseInt(edit8.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_soustraction(table, 9+table, Integer.parseInt(edit9.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
-                                           if(!test_soustraction(table, 10+table, Integer.parseInt(edit10.getText().toString()))) {
-                                               erreurs++ ;
-                                           }
+                                            else {
+                                               int erreurs = 0;
+                                               // Vérification des résultats
+                                               if (!test_soustraction(table, 1 + table, Integer.parseInt(edit1.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 2 + table, Integer.parseInt(edit2.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 3 + table, Integer.parseInt(edit3.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 4 + table, Integer.parseInt(edit4.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 5 + table, Integer.parseInt(edit5.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 6 + table, Integer.parseInt(edit6.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 7 + table, Integer.parseInt(edit7.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 8 + table, Integer.parseInt(edit8.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 9 + table, Integer.parseInt(edit9.getText().toString()))) {
+                                                   erreurs++;
+                                               }
+                                               if (!test_soustraction(table, 10 + table, Integer.parseInt(edit10.getText().toString()))) {
+                                                   erreurs++;
+                                               }
 
-                                           // Création de l'intention
-                                           Intent intent = new Intent(soustraction_1.this, soustraction_2.class);
-                                           intent.putExtra("ERREURS", erreurs) ;
-                                           intent.putExtra("ID_COMPTE", id) ;
-                                           startActivity(intent);
+                                               // Création de l'intention
+                                               Intent intent = new Intent(soustraction_1.this, soustraction_2.class);
+                                               intent.putExtra("ERREURS", erreurs);
+                                               intent.putExtra("ID_COMPTE", id);
+                                               startActivity(intent);
+                                           }
                                        }
                                    }
         );
